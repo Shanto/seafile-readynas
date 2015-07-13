@@ -1,0 +1,19 @@
+<Application resource-id="seafile"><!-- 'resource-id' must be AppName -->
+  <Category>APP_CAT_STORAGE</Category>
+  <Name>Seafile</Name><!-- Any desciptive name, upto 48 chars -->
+  <Author>Shanto</Author><!-- Authers name. upto 48 chars -->
+  <Version>4.2.3</Version><!-- Version -->
+  <MinFirmwareVer>readynasos (>=6.2)</MinFirmwareVer>
+  <RequireReboot>0</RequireReboot><!-- If non-zero, it indicate reboot is required. -->
+  <ConfigURL/><!-- 'localhost' will be replaced by framework JS. -->
+  <LogoURL>/apps/seafile/logo.png</LogoURL>
+  <LaunchURL>https://localhost:8000/</LaunchURL><!-- 'localhost' will be replaced by framework JS. -->
+  <InfoURL>http://seafile.com/</InfoURL>
+  <ReservePort>10001</ReservePort>
+  <ReservePort>12001</ReservePort>
+  <ReservePort>8000</ReservePort>
+  <ReservePort>8002</ReservePort>
+  <DebianPackage>seafile</DebianPackage>
+  <ServiceName>fvapp-seafile.service</ServiceName>
+  <Description lang="en-us">Open source cloud storage with file encryption and group sharing, and emphasis on reliability and high performance.</Description>
+</Application>

@@ -1,0 +1,22 @@
+[Unit]
+Description=Seafile
+After=apache2.service
+
+[Service]
+Type=oneshot
+User=admin
+Group=admin
+Environment="PATH=/usr/local/bin:/usr/bin:/bin:/apps/seafile/bin"
+Environment="APPDIR=/apps/seafile"
+Environment="APP_CONF_DIR=/apps/seafile/config"
+Environment="APP_LOG_DIR=/apps/seafile/var/log"
+Environment="CCNET_CONF_DIR=/apps/seafile/config/ccnet"
+Environment="SEAFILE_CONF_DIR=/apps/seafile/config/seafile"
+Environment="LD_LIBRARY_PATH=/apps/seafile/lib"
+Environment="PYTHONPATH=/apps/seafile/lib/python2.7/site-packages:/apps/seafile/seahub:/apps/seafile/config/seahub"
+ExecStart=/apps/seafile/bin/seafile-controller -c ${CCNET_CONF_DIR} -d ${APP_CONF_DIR}/seafile -L ${APP_LOG_DIR}
+ExecStart=/apps/seafile/bin/gunicorn wsgi:application --daemon --chdir /apps/seafile/seahub/seahub --workers 2 -b "0.0.0.0:8000" --preload --access-logfile ${APP_LOG_DIR}/access.log --error-logfile ${APP_LOG_DIR}/error.log --timeout=1200
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target

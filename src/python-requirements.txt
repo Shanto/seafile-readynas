@@ -1,0 +1,11 @@
+Django==1.5.12
+chardet
+django-appconf
+Djblets==0.6.14
+django-compressor==1.4
+django-statici18n==1.1.2
+flup
+gunicorn
+python-dateutil
+simplejson
+six

@@ -1,0 +1,13 @@
+Source: seafile
+Section: contrib
+Priority: extra
+Maintainer: Shanto <shanto@hotmail.com>
+Build-Depends: debhelper (>= 8.0.0), libtool, libc6-dev, libstdc++6-4.7-dev, libevent-dev (>= 2.0), libglib2.0-dev (>= 2.28), uuid-dev, intltool (>= 0.40), libsqlite3-dev (>= 3.7), libmysqlclient-dev (>= 5.5), libpq-dev, libarchive-dev, libjansson-dev, valac, libfuse-dev, flex, re2c, cmake, python-pip, wget
+Standards-Version: 3.9.3
+Homepage: http://www.seafile.com/
+
+Package: seafile
+Architecture: amd64 armel
+Depends: ${misc:Depends}, readynasos (>= 6.2), python2.7, python-imaging
+Description: Seafile Server Package for ReadyNAS 6
+ Open Source Cloud Storage for your teams and organizations.

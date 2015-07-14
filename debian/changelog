@@ -1,5 +1,5 @@
 seafile (4.2.3) UNRELEASED; urgency=low
 
-  * Initial release. (Closes: #XXXXXX)
+  * Initial release. (Closes: #565, https://github.com/haiwen/seafile-client/issues/565)
 
  -- Shanto <shanto@hotmail.com>  Fri, 10 Jul 2015 18:07:57 +0000

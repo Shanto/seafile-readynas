@@ -39,6 +39,7 @@ case "$1" in
     [ -f $SEAHUB_DB ] || sqlite3 $SEAHUB_DB ".read $SEAHUB_SQL"
     [ -L $SEAHUB_MEDIA/avatars ] || mv $SEAHUB_MEDIA/avatars $SEAHUB_DATA/ && ln -s $SEAHUB_DATA/avatars $SEAHUB_MEDIA/avatars
     chown -R admin:admin $APPDIR
+    systemctl daemon-reload && systemctl restart fvapp-seafile
     event_push app readynasd '<add-s resource-type="LocalApp" resource-id="LocalApp"><LocalApp appname="seafile" success="1"/></add-s>' 0 0
     ;;
 

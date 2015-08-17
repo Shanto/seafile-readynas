@@ -2,7 +2,7 @@
   <Category>APP_CAT_STORAGE</Category>
   <Name>Seafile</Name><!-- Any desciptive name, upto 48 chars -->
   <Author>Shanto</Author><!-- Authers name. upto 48 chars -->
-  <Version>4.2.3</Version><!-- Version -->
+  <Version>4.3.1</Version><!-- Version -->
   <MinFirmwareVer>readynasos (>=6.2)</MinFirmwareVer>
   <RequireReboot>0</RequireReboot><!-- If non-zero, it indicate reboot is required. -->
   <ConfigURL/><!-- 'localhost' will be replaced by framework JS. -->

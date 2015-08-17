@@ -1,5 +1,5 @@
 APPNAME = seafile
-BASE_VER = 4.2.3-server
+BASE_VER = 4.3.1-server
 RPC_VER = 3.0-latest
 CCNET_VER = $(BASE_VER)
 ZDB_VER = 2.12

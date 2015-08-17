@@ -125,6 +125,8 @@ install: fetch-source $(PREFIX)/lib/libseafile.so $(PREFIX)/seahub/manage.py ins
 	install -d $(APPDIR) $(APPDIR)/default-config/seafile $(APPDIR)/default-config/seahub $(APPDIR)/scripts/upgrade $(APPDIR)/var/log $(APPDIR)/var/run
 	install seafile-$(BASE_VER)/scripts/*.sh $(APPDIR)/scripts
 	install seafile-$(BASE_VER)/scripts/upgrade/*.sh $(APPDIR)/scripts/upgrade
+	install seafile-$(BASE_VER)/scripts/upgrade/*.py $(APPDIR)/scripts/upgrade
+	cp -r seafile-$(BASE_VER)/scripts/upgrade/sql $(APPDIR)/scripts/upgrade
 	rm -rf $(APPDIR)/include $(APPDIR)/lib/pkgconfig
 	find $(APPDIR) -type f -path '*/lib/*.so*' -o -path '*/bin/*' | while read bin; do file $$bin | grep -q 'not stripped' && strip $$bin; done || true
 	find $(APPDIR) -type f -path '*/lib/*.la' -delete

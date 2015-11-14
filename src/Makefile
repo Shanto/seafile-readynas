@@ -94,7 +94,6 @@ seahub: seahub-$(BASE_VER).tar.gz seahub-thirdparty
 	cd seahub-$(BASE_VER) && \
 		cat $(PWD)/rn-app-layout.seahub.patch | patch -N -p1 -r /dev/null
 	cd seahub-$(BASE_VER) && \
-		sed -i -r "s|(SEAFILE_VERSION\s*=\s*)'.+'|\1'4.2.3'|" seahub/settings.py && \
 		cp -pr ./thirdpart/* $(PYSITE) && rm -rf ./thirdpart/*
 	install -d $(PREFIX)/seahub && cp -pr seahub-$(BASE_VER)/* $(PREFIX)/seahub
 
